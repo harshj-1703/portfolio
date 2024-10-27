@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6;
+  }
+  50% {
+    box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6;
+  }
+}
+
+.glowing-border {
+  position: relative;
+  border-radius: 50%;
+  animation: glow 1.5s infinite;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playwrite GBS';
+  src: url('/fonts/PlaywriteGBS-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
