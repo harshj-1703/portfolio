@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const techLogos = {
@@ -264,7 +265,7 @@ function Technologies() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <img
+                        <Image
                           src={tech.logo}
                           alt={tech.name}
                           className="w-12 h-12"

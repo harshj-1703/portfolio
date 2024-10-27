@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const socialMediaLinks = [
@@ -40,7 +41,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="flex items-center"
             >
-              <img
+              <Image
                 src={link.logo}
                 alt={link.name}
                 className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-110"
