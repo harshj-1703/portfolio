@@ -1,5 +1,6 @@
 // src/app/page.tsx
 import About from "@/components/About";
+import Achievements from "@/components/Achievements";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Technologies from "@/components/Technologies";
@@ -15,6 +16,8 @@ export default function Home() {
       <Technologies />
 
       <Projects />
+
+      <Achievements />
 
       <Resume />
     </div>
