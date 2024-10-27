@@ -4,7 +4,7 @@ function About() {
   return (
     <section
       id="about"
-      className="flex items-center justify-center bg-black text-white py-10"
+      className="flex items-center justify-center bg-black text-white py-10 min-h-screen"
     >
       <div className="container max-w-6xl mx-auto flex flex-col md:flex-row items-center px-4">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
