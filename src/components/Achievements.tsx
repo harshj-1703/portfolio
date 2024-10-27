@@ -33,10 +33,10 @@ function Achievements() {
   return (
     <section
       id="achievements"
-      className="flex flex-col items-center justify-center min-h-screen bg-black text-white py-10"
+      className="flex flex-col items-center justify-center bg-black text-white py-10"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-11 text-center font-josefin">
+        <h2 className="underline underline-offset-4 text-4xl font-bold mb-11 text-center font-josefin">
           Achievements & Certificates
         </h2>
         <ul className="list-disc px-5">

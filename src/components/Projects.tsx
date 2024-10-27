@@ -66,7 +66,7 @@ function Projects() {
       className="flex flex-col items-center justify-center min-h-screen bg-black text-white py-10"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-6 text-center font-josefin">
+        <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-center font-josefin">
           Projects
         </h2>
         <div className="flex flex-wrap justify-center">
