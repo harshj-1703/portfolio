@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const projects = [
@@ -76,7 +77,7 @@ function Projects() {
               className="flex flex-col items-center m-4 bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-xs w-full" // Adjusted for width and max-width
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <img
+                <Image
                   src={project.image}
                   alt={project.name}
                   className="w-full h-40 object-cover"

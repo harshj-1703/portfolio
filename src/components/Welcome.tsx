@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const socialMediaLinks = [
   {
@@ -42,7 +43,7 @@ function Welcome() {
                 rel="noopener noreferrer"
                 className="flex items-center"
               >
-                <img
+                <Image
                   src={link.logo}
                   alt={link.name}
                   className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-110"
