@@ -2,6 +2,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const socialMediaLinks = [
+  {
+    name: "Email",
+    url: "mailto:harshj6680@google.com",
+    logo: "/logos/Email.svg",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/harsh-jolapara-a63b99205/",
+    logo: "/logos/LinkedIn.svg",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/harshj-1703",
+    logo: "/logos/GitHub.svg",
+  },
+  {
+    name: "Stack Overflow",
+    url: "https://stackoverflow.com/users/19262833/harsh-jolapara",
+    logo: "/logos/Stack Overflow.svg",
+  },
+];
+
 function Welcome() {
   return (
     <section
@@ -10,16 +33,34 @@ function Welcome() {
     >
       <div className="container justify-center mx-auto flex flex-col md:flex-row items-center px-4">
         <div className="absolute top-4 right-5">
+          <div className="flex justify-center space-x-4">
+            {socialMediaLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center"
+              >
+                <img
+                  src={link.logo}
+                  alt={link.name}
+                  className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-110"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+        <div className="absolute top-4 left-5">
           <motion.img
             src="/Programming_Languages.gif"
             alt="Icon 2"
-            className="w-16 h-16"
+            className="w-12 h-12"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           />
         </div>
-
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8 relative overflow-hidden glowing-border">
           <motion.img
             src="/logo.png"
