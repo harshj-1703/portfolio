@@ -34,3 +34,17 @@ body {
   border-radius: 50%;
   animation: glow 1.5s infinite;
 }
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Playwrite GBS';
+  src: url('/fonts/PlaywriteGBS-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}

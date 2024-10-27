@@ -12,9 +12,9 @@ export default function Home() {
 
       <About />
 
-      <Projects />
-
       <Technologies />
+
+      <Projects />
 
       <Resume />
     </div>

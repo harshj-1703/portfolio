@@ -4,8 +4,22 @@ import { motion } from "framer-motion";
 
 function Welcome() {
   return (
-    <section className="flex items-center justify-center min-h-screen bg-black text-white">
+    <section
+      id="welcome"
+      className="flex items-center justify-center min-h-screen bg-black text-white relative"
+    >
       <div className="container justify-center mx-auto flex flex-col md:flex-row items-center px-4">
+        <div className="absolute top-4 right-5">
+          <motion.img
+            src="/Programming_Languages.gif"
+            alt="Icon 2"
+            className="w-16 h-16"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+        </div>
+
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8 relative overflow-hidden glowing-border">
           <motion.img
             src="/logo.png"
@@ -23,7 +37,7 @@ function Welcome() {
         </div>
         <div className="text-center md:text-left">
           <motion.h1
-            className="text-5xl font-extrabold cursor-pointer"
+            className="text-5xl font-extrabold cursor-pointer font-josefin"
             style={{ fontSize: "80px" }}
             drag
             dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
@@ -34,7 +48,7 @@ function Welcome() {
             Harsh Jolapara
           </motion.h1>
           <motion.h2
-            className="text-2xl mt-4 font-semibold cursor-pointer"
+            className="text-2xl mt-4 font-semibold cursor-pointer font-playwritegbs"
             style={{ fontSize: "40px" }}
             drag
             dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
