@@ -24,6 +24,11 @@ const socialMediaLinks = [
     url: "https://stackoverflow.com/users/19262833/harsh-jolapara",
     logo: "/logos/Stack Overflow.svg",
   },
+  {
+    name: "Medium",
+    url: "https://medium.com/@harshj-1703",
+    logo: "/logos/Medium.svg",
+  },
 ];
 
 function Welcome() {
