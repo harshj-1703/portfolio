@@ -35,6 +35,9 @@ const techLogos = {
   firebase: "/logos/Firebase.svg",
   c: "/logos/C.svg",
   postman: "/logos/Postman.svg",
+  apiGateway: "/logos/API Gateway.svg",
+  bedrock: "/logos/Bedrock.svg",
+  amazonLex: "/logos/Amazon Lex.svg",
 };
 
 const technologies = [
@@ -188,6 +191,21 @@ const technologies = [
         logo: techLogos.cloudWatch,
         documentation: "https://aws.amazon.com/cloudwatch/",
       },
+      {
+        name: "Amazon API Gateway",
+        logo: techLogos.apiGateway,
+        documentation: "https://docs.aws.amazon.com/apigateway/",
+      },
+      {
+        name: "Amazon Lex",
+        logo: techLogos.amazonLex,
+        documentation: "https://docs.aws.amazon.com/lex/",
+      },
+      {
+        name: "Amazon Bedrock",
+        logo: techLogos.bedrock,
+        documentation: "https://docs.aws.amazon.com/bedrock/",
+      },
     ],
   },
   {
@@ -201,7 +219,7 @@ const technologies = [
     ],
   },
   {
-    category: "Version Control & CI/CD",
+    category: "Version Control",
     items: [
       {
         name: "Git",
