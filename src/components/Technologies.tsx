@@ -38,6 +38,10 @@ const techLogos = {
   apiGateway: "/logos/API Gateway.svg",
   bedrock: "/logos/Bedrock.svg",
   amazonLex: "/logos/Amazon Lex.svg",
+  docker: "/logos/docker.svg",
+  jira: "/logos/jira.svg",
+  swagger: "/logos/swagger.svg",
+  terraform: "/logos/terraform.svg",
 };
 
 const technologies = [
@@ -134,7 +138,7 @@ const technologies = [
     ],
   },
   {
-    category: "Cloud & AWS Services",
+    category: "AWS Services",
     items: [
       {
         name: "EC2",
@@ -209,12 +213,29 @@ const technologies = [
     ],
   },
   {
-    category: "Backend Services",
+    category: "Backend as a Services(Baas)",
     items: [
       {
         name: "Firebase",
         logo: techLogos.firebase,
         documentation: "https://firebase.google.com/docs",
+      },
+    ],
+  },
+  {
+    category: "DevOps & Infrastructure",
+    items: [
+      {
+        name: "Docker",
+        logo: techLogos.docker,
+        documentation: "https://docs.docker.com/get-started/",
+        level: "Beginner",
+      },
+      {
+        name: "Terraform (Beginner)",
+        logo: techLogos.terraform,
+        documentation: "https://developer.hashicorp.com/terraform/docs",
+        level: "Beginner",
       },
     ],
   },
@@ -252,6 +273,17 @@ const technologies = [
         logo: techLogos.postman,
         documentation:
           "https://learning.postman.com/docs/getting-started/introduction/",
+      },
+      {
+        name: "Jira",
+        logo: techLogos.jira,
+        documentation:
+          "https://support.atlassian.com/jira-software-cloud/docs/jira-software-documentation/",
+      },
+      {
+        name: "Swagger",
+        logo: techLogos.swagger,
+        documentation: "https://swagger.io/docs/",
       },
     ],
   },
