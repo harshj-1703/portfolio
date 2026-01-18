@@ -3,6 +3,13 @@ import React from "react";
 
 const projects = [
   {
+    name: "BhagvadgitaGPT ",
+    description:
+      "This project allows users to input problems and receive suggestions from the Bhagavad Gita. Built using Flask, it provides a unique way to seek advice through ancient wisdom.",
+    image: "/projects/shreemad_bhagvadgeeta_api.png",
+    link: "https://harshj-1703-bhagvadgitagpt-flask-api.hf.space/",
+  },
+  {
     name: "Government Document Management",
     description:
       "An B.Tech Final Year Project, Created Website with MERN Stack using ReactJS as frontend and NodeJS as backend API. Also used Firebase services for mobile OTP, Storage and User Management, Email etc.",
@@ -36,13 +43,6 @@ const projects = [
       "An app connecting job seekers and companies using Flutter and Firebase. It includes Google Ads, Firebase storage, OTP verification, and more.",
     image: "/projects/getsetwork.png",
     link: "",
-  },
-  {
-    name: "GitaGPT API",
-    description:
-      "This project allows users to input problems and receive suggestions from the Bhagavad Gita. Built using Flask, it provides a unique way to seek advice through ancient wisdom.",
-    image: "/projects/shreemad_bhagvadgeeta_api.png",
-    link: "https://github.com/harshj-1703/Gita_GPT-FLASK-API",
   },
   {
     name: "Shreemad Bhagavad Gita App",
