@@ -21,77 +21,42 @@ function About() {
           <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-gray-100 font-josefin">
             About Me
           </h2>
+
           <p className="text-lg md:text-xl font-light leading-relaxed">
-            Jay Hind! I'm <strong>Harsh Jolapara</strong>, a Software Engineer
-            and a passionate <strong>Full Stack Developer</strong> with
-            expertise in
+            Jay Hind! I&apos;m <strong>Harsh Jolapara</strong>, an{" "}
+            <strong>AWS Certified Cloud Practitioner</strong> and Software
+            Engineer with 2+ years of experience specializing in{" "}
+            <strong>Full Stack Development</strong>,{" "}
             <strong>Cloud (AWS)</strong>,{" "}
-            <strong>CCaaS (Amazon Connect)</strong>, and
-            <strong>AI Agent Development</strong>, focused on building scalable,
-            secure, and intelligent cloud-based applications.
+            <strong>CCaaS (Amazon Connect)</strong>, and{" "}
+            <strong>AI Agent Development</strong>.
           </p>
 
           <p className="text-lg md:text-xl font-light leading-relaxed mt-4">
             I hold a{" "}
-            <strong>B.Tech in Information & Communication Technology</strong>{" "}
-            and have hands-on industry experience working as a Software
-            Engineer. With over
-            <strong>2+ years of professional experience</strong>, I have worked
-            extensively on:
-          </p>
-
-          <ul className="list-disc ml-6 mt-3 text-lg md:text-xl font-light leading-relaxed">
-            <li>
-              <strong>AWS Services:</strong> Amazon Connect, AWS Lambda, Amazon
-              Bedrock
-            </li>
-            <li>
-              <strong>Backend & APIs:</strong> Serverless architectures, cloud
-              integrations
-            </li>
-            <li>
-              <strong>Frontend & Mobile:</strong> Flutter & Dart
-            </li>
-            <li>
-              <strong>AI & ML Foundations:</strong> Image Processing, AI Agent
-              Development
-            </li>
-          </ul>
-
-          <p className="text-lg md:text-xl font-light leading-relaxed mt-4">
-            I have contributed to real-world products, cloud contact center
-            solutions, and scalable applications while working at
-            <strong>Digiclarity, LLC</strong> and
-            <strong>ProminentPixel</strong>, progressing from
-            <strong>Junior Software Engineer</strong> to
-            <strong>Software Engineer</strong> roles.
+            <strong>
+              B.Tech in Information &amp; Communication Technology
+            </strong>{" "}
+            and am currently working at <strong>Digiclarity, LLC</strong> as a{" "}
+            <strong>Software Engineer</strong>.
           </p>
 
           <p className="text-lg md:text-xl font-light leading-relaxed mt-4">
-            I am also a <strong>patent and copyright holder</strong>, including:
-          </p>
-
-          <ul className="list-disc ml-6 mt-3 text-lg md:text-xl font-light leading-relaxed">
-            <li>GetSetWork Application</li>
-            <li>Smart Dustbin</li>
-          </ul>
-
-          <p className="text-lg md:text-xl font-light leading-relaxed mt-4">
-            I enjoy solving complex problems, exploring emerging cloud and AI
-            technologies, and building solutions that create real impact.
+            I&apos;m also a <strong>patent and copyright holder</strong> for the
+            GetSetWork Application and Smart Dustbin projects.
           </p>
 
           <p className="text-lg md:text-xl font-light leading-relaxed mt-4">
-            📍 <strong>Rajkot, Gujarat, India</strong>
-            <br />
-            Open to opportunities in
-            <strong>Cloud Development</strong>,
-            <strong>Full Stack Development</strong>,<strong>CCaaS</strong>, and
-            <strong>AI-driven applications</strong>.
-          </p>
-
-          <p className="text-lg md:text-xl font-light leading-relaxed mt-4 font-medium">
-            Let’s connect and build something impactful!
+            Open to opportunities in Cloud, Full Stack, CCaaS, and AI-driven
+            development.{" "}
+            <a
+              href="https://www.linkedin.com/in/harshjolapara/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
+            >
+              Visit my LinkedIn for more details.
+            </a>
           </p>
         </div>
       </div>

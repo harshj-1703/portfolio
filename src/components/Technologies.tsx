@@ -48,243 +48,76 @@ const technologies = [
   {
     category: "Languages & Frameworks",
     items: [
-      {
-        name: "C Language",
-        logo: techLogos.c,
-        documentation: "https://en.cppreference.com/w/c",
-      },
-      {
-        name: "HTML5",
-        logo: techLogos.html5,
-        documentation:
-          "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
-      },
-      {
-        name: "CSS3",
-        logo: techLogos.css3,
-        documentation: "https://www.css3.info/",
-      },
-      {
-        name: "JavaScript",
-        logo: techLogos.js,
-        documentation:
-          "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      },
-      {
-        name: "TypeScript",
-        logo: techLogos.ts,
-        documentation: "https://www.typescriptlang.org/docs/",
-      },
-      {
-        name: "React",
-        logo: techLogos.react,
-        documentation: "https://reactjs.org/docs/getting-started.html",
-      },
-      {
-        name: "Node.js",
-        logo: techLogos.node,
-        documentation: "https://nodejs.org/en/docs/",
-      },
-      {
-        name: "Tailwind CSS",
-        logo: techLogos.tailwind,
-        documentation: "https://tailwindcss.com/docs",
-      },
-      {
-        name: "Flutter",
-        logo: techLogos.flutter,
-        documentation: "https://flutter.dev/docs",
-      },
-      {
-        name: "PHP",
-        logo: techLogos.php,
-        documentation: "https://www.php.net/",
-      },
-      {
-        name: "Python",
-        logo: techLogos.python,
-        documentation: "https://www.python.org/doc/",
-      },
+      { name: "C Language", logo: techLogos.c, documentation: "https://en.cppreference.com/w/c" },
+      { name: "HTML5", logo: techLogos.html5, documentation: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5" },
+      { name: "CSS3", logo: techLogos.css3, documentation: "https://www.css3.info/" },
+      { name: "JavaScript", logo: techLogos.js, documentation: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { name: "TypeScript", logo: techLogos.ts, documentation: "https://www.typescriptlang.org/docs/" },
+      { name: "React", logo: techLogos.react, documentation: "https://reactjs.org/docs/getting-started.html" },
+      { name: "Node.js", logo: techLogos.node, documentation: "https://nodejs.org/en/docs/" },
+      { name: "Tailwind CSS", logo: techLogos.tailwind, documentation: "https://tailwindcss.com/docs" },
+      { name: "Flutter", logo: techLogos.flutter, documentation: "https://flutter.dev/docs" },
+      { name: "PHP", logo: techLogos.php, documentation: "https://www.php.net/" },
+      { name: "Python", logo: techLogos.python, documentation: "https://www.python.org/doc/" },
     ],
   },
   {
     category: "Databases",
     items: [
-      {
-        name: "MySQL",
-        logo: techLogos.mysql,
-        documentation: "https://www.mysql.com/",
-      },
-      {
-        name: "PostgreSQL",
-        logo: techLogos.postgreSQL,
-        documentation: "https://www.postgresql.org/docs/",
-      },
-      {
-        name: "Microsoft SQL Server",
-        logo: techLogos.sqlServer,
-        documentation: "https://docs.microsoft.com/en-us/sql/sql-server/",
-      },
-      {
-        name: "SQLite",
-        logo: techLogos.sqlite,
-        documentation: "https://www.sqlite.org/docs.html",
-      },
-      {
-        name: "MongoDB",
-        logo: techLogos.mongodb,
-        documentation: "https://www.mongodb.com/",
-      },
+      { name: "MySQL", logo: techLogos.mysql, documentation: "https://www.mysql.com/" },
+      { name: "PostgreSQL", logo: techLogos.postgreSQL, documentation: "https://www.postgresql.org/docs/" },
+      { name: "Microsoft SQL Server", logo: techLogos.sqlServer, documentation: "https://docs.microsoft.com/en-us/sql/sql-server/" },
+      { name: "SQLite", logo: techLogos.sqlite, documentation: "https://www.sqlite.org/docs.html" },
+      { name: "MongoDB", logo: techLogos.mongodb, documentation: "https://www.mongodb.com/" },
     ],
   },
   {
     category: "AWS Services",
     items: [
-      {
-        name: "EC2",
-        logo: techLogos.ec2,
-        documentation: "https://aws.amazon.com/ec2/",
-      },
-      {
-        name: "Lambda",
-        logo: techLogos.lambda,
-        documentation: "https://aws.amazon.com/lambda/",
-      },
-      {
-        name: "S3",
-        logo: techLogos.s3,
-        documentation: "https://aws.amazon.com/s3/",
-      },
-      {
-        name: "DynamoDB",
-        logo: techLogos.dynamodb,
-        documentation: "https://aws.amazon.com/dynamodb/",
-      },
-      {
-        name: "RDS",
-        logo: techLogos.rds,
-        documentation: "https://aws.amazon.com/rds/",
-      },
-      {
-        name: "SQS",
-        logo: techLogos.sqs,
-        documentation: "https://aws.amazon.com/sqs/",
-      },
-      {
-        name: "Amazon Connect",
-        logo: techLogos.connect,
-        documentation: "https://aws.amazon.com/connect/",
-      },
-      {
-        name: "Pinpoint",
-        logo: techLogos.pinpoint,
-        documentation: "https://aws.amazon.com/pinpoint/",
-      },
-      {
-        name: "SES",
-        logo: techLogos.ses,
-        documentation: "https://aws.amazon.com/ses/",
-      },
-      {
-        name: "Amazon Location Service",
-        logo: techLogos.location,
-        documentation: "https://aws.amazon.com/location/",
-      },
-      {
-        name: "CloudWatch",
-        logo: techLogos.cloudWatch,
-        documentation: "https://aws.amazon.com/cloudwatch/",
-      },
-      {
-        name: "Amazon API Gateway",
-        logo: techLogos.apiGateway,
-        documentation: "https://docs.aws.amazon.com/apigateway/",
-      },
-      {
-        name: "Amazon Lex",
-        logo: techLogos.amazonLex,
-        documentation: "https://docs.aws.amazon.com/lex/",
-      },
-      {
-        name: "Amazon Bedrock",
-        logo: techLogos.bedrock,
-        documentation: "https://docs.aws.amazon.com/bedrock/",
-      },
+      { name: "EC2", logo: techLogos.ec2, documentation: "https://aws.amazon.com/ec2/" },
+      { name: "Lambda", logo: techLogos.lambda, documentation: "https://aws.amazon.com/lambda/" },
+      { name: "S3", logo: techLogos.s3, documentation: "https://aws.amazon.com/s3/" },
+      { name: "DynamoDB", logo: techLogos.dynamodb, documentation: "https://aws.amazon.com/dynamodb/" },
+      { name: "RDS", logo: techLogos.rds, documentation: "https://aws.amazon.com/rds/" },
+      { name: "SQS", logo: techLogos.sqs, documentation: "https://aws.amazon.com/sqs/" },
+      { name: "Amazon Connect", logo: techLogos.connect, documentation: "https://aws.amazon.com/connect/" },
+      { name: "Pinpoint", logo: techLogos.pinpoint, documentation: "https://aws.amazon.com/pinpoint/" },
+      { name: "SES", logo: techLogos.ses, documentation: "https://aws.amazon.com/ses/" },
+      { name: "Amazon Location Service", logo: techLogos.location, documentation: "https://aws.amazon.com/location/" },
+      { name: "CloudWatch", logo: techLogos.cloudWatch, documentation: "https://aws.amazon.com/cloudwatch/" },
+      { name: "Amazon API Gateway", logo: techLogos.apiGateway, documentation: "https://docs.aws.amazon.com/apigateway/" },
+      { name: "Amazon Lex", logo: techLogos.amazonLex, documentation: "https://docs.aws.amazon.com/lex/" },
+      { name: "Amazon Bedrock", logo: techLogos.bedrock, documentation: "https://docs.aws.amazon.com/bedrock/" },
     ],
   },
   {
-    category: "Backend as a Services(Baas)",
+    category: "Backend as a Services (BaaS)",
     items: [
-      {
-        name: "Firebase",
-        logo: techLogos.firebase,
-        documentation: "https://firebase.google.com/docs",
-      },
+      { name: "Firebase", logo: techLogos.firebase, documentation: "https://firebase.google.com/docs" },
     ],
   },
   {
     category: "DevOps & Infrastructure",
     items: [
-      {
-        name: "Docker",
-        logo: techLogos.docker,
-        documentation: "https://docs.docker.com/get-started/",
-        level: "Beginner",
-      },
-      {
-        name: "Terraform (Beginner)",
-        logo: techLogos.terraform,
-        documentation: "https://developer.hashicorp.com/terraform/docs",
-        level: "Beginner",
-      },
+      { name: "Docker", logo: techLogos.docker, documentation: "https://docs.docker.com/get-started/" },
+      { name: "Terraform (Beginner)", logo: techLogos.terraform, documentation: "https://developer.hashicorp.com/terraform/docs" },
     ],
   },
   {
     category: "Version Control",
     items: [
-      {
-        name: "Git",
-        logo: techLogos.git,
-        documentation: "https://git-scm.com/doc",
-      },
-      {
-        name: "GitHub",
-        logo: techLogos.github,
-        documentation: "https://github.com/docs",
-      },
-      {
-        name: "GitLab",
-        logo: techLogos.gitlab,
-        documentation: "https://docs.gitlab.com/ee/",
-      },
-      {
-        name: "Bitbucket",
-        logo: techLogos.bitbucket,
-        documentation:
-          "https://support.atlassian.com/bitbucket-cloud/docs/overview/",
-      },
+      { name: "Git", logo: techLogos.git, documentation: "https://git-scm.com/doc" },
+      { name: "GitHub", logo: techLogos.github, documentation: "https://github.com/docs" },
+      { name: "GitLab", logo: techLogos.gitlab, documentation: "https://docs.gitlab.com/ee/" },
+      { name: "Bitbucket", logo: techLogos.bitbucket, documentation: "https://support.atlassian.com/bitbucket-cloud/docs/overview/" },
     ],
   },
   {
     category: "Tools",
     items: [
-      {
-        name: "Postman",
-        logo: techLogos.postman,
-        documentation:
-          "https://learning.postman.com/docs/getting-started/introduction/",
-      },
-      {
-        name: "Jira",
-        logo: techLogos.jira,
-        documentation:
-          "https://support.atlassian.com/jira-software-cloud/docs/jira-software-documentation/",
-      },
-      {
-        name: "Swagger",
-        logo: techLogos.swagger,
-        documentation: "https://swagger.io/docs/",
-      },
+      { name: "Postman", logo: techLogos.postman, documentation: "https://learning.postman.com/docs/getting-started/introduction/" },
+      { name: "Jira", logo: techLogos.jira, documentation: "https://support.atlassian.com/jira-software-cloud/docs/jira-software-documentation/" },
+      { name: "Swagger", logo: techLogos.swagger, documentation: "https://swagger.io/docs/" },
     ],
   },
 ];
@@ -318,14 +151,15 @@ function Technologies() {
                         <Image
                           src={tech.logo}
                           alt={tech.name}
-                          className="w-12 h-12"
+                          width={48}
+                          height={48}
                         />
                       </a>
                     ) : (
                       <span className="text-gray-400">{tech.name}</span>
                     )}
                   </div>
-                  <p className="mt-2 max-w-[80px] text-center whitespace-normal">
+                  <p className="mt-2 max-w-[80px] text-center whitespace-normal text-sm">
                     {tech.name}
                   </p>
                 </div>

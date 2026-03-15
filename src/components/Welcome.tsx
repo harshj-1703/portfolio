@@ -11,7 +11,7 @@ const socialMediaLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/harsh-jolapara-a63b99205/",
+    url: "https://www.linkedin.com/in/harshjolapara/",
     logo: "/logos/LinkedIn.svg",
   },
   {
@@ -51,7 +51,9 @@ function Welcome() {
                 <Image
                   src={link.logo}
                   alt={link.name}
-                  className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-110"
+                  width={36}
+                  height={36}
+                  className="cursor-pointer transition-transform transform hover:scale-110"
                 />
               </a>
             ))}
