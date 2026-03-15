@@ -2,6 +2,8 @@
 import About from "@/components/About";
 import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
+import GitHubNetwork from "@/components/GitHubNetwork";
+import Patents from "@/components/Patents";
 import Projects from "@/components/Projects";
 import Resume from "@/components/Resume";
 import Technologies from "@/components/Technologies";
@@ -16,9 +18,13 @@ export default function Home() {
 
       <Technologies />
 
+      <GitHubNetwork />
+
       <Projects />
 
       <Achievements />
+
+      <Patents />
 
       <Resume />
 

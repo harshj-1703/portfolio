@@ -78,6 +78,8 @@ function Projects() {
             >
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <Image
+                  width={100}
+                  height={100}
                   src={project.image}
                   alt={project.name}
                   className="w-full h-40 object-cover"

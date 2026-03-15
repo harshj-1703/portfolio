@@ -9,7 +9,7 @@ const socialMediaLinks = [
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/harsh-jolapara-a63b99205/",
+    url: "https://www.linkedin.com/in/harshjolapara/",
     logo: "/logos/LinkedIn.svg",
   },
   {
@@ -36,7 +36,7 @@ function Footer() {
       className="flex flex-row items-center justify-between bg-black text-white py-4 px-10"
     >
       <div className="font-josefin">Developed By: Harsh Jolapara</div>
-      <div className="">
+      <div>
         <div className="flex justify-center space-x-4">
           {socialMediaLinks.map((link) => (
             <a
@@ -49,7 +49,9 @@ function Footer() {
               <Image
                 src={link.logo}
                 alt={link.name}
-                className="w-9 h-9 cursor-pointer transition-transform transform hover:scale-110"
+                width={36}
+                height={36}
+                className="cursor-pointer transition-transform transform hover:scale-110"
               />
             </a>
           ))}
