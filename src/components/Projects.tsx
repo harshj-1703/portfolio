@@ -5,9 +5,9 @@ const projects = [
   {
     name: "BhagvadgitaGPT ",
     description:
-      "This project allows users to input problems and receive suggestions from the Bhagavad Gita. Built using Flask, it provides a unique way to seek advice through ancient wisdom.",
+      "BhagvadGitaGPT is a full-stack AI application that answers spiritual and life questions using the Bhagavad Gita as a knowledge base. The backend is a Flask API; the frontend is a React/TypeScript SPA built with Vite.",
     image: "/projects/shreemad_bhagvadgeeta_api.png",
-    link: "https://harshj-1703-bhagvadgitagpt-flask-api.hf.space/",
+    link: "http://bhagvadgitagpt-by-hj.netlify.app/",
   },
   {
     name: "Government Document Management",
