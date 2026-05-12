@@ -3,6 +3,15 @@ import { FiDownload, FiExternalLink } from "react-icons/fi";
 
 const achievements = [
   {
+    title: "AWS Knowledge: Amazon Connect Communications Specialist - Training Badge",
+    issuer: "Amazon Web Services (AWS)",
+    year: "May 2026",
+    expiry: null,
+    downloadLink: null,
+    verifyLink:
+      "https://www.credly.com/badges/d5a636b4-2956-40a3-adf7-5eacd051064a",
+  },
+  {
     title: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services (AWS)",
     year: "Feb 2026",
