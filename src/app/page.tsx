@@ -18,13 +18,13 @@ export default function Home() {
 
       <Technologies />
 
-      <GitHubNetwork />
-
       <Projects />
 
       <Achievements />
 
       <Patents />
+
+      <GitHubNetwork />
 
       <Resume />
 
