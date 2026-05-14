@@ -17,12 +17,12 @@ export default function Home() {
       <About />
 
       <Technologies />
-
-      <Projects />
-
+      
       <Achievements />
 
       <Patents />
+      
+      <Projects />
 
       <GitHubNetwork />
 
