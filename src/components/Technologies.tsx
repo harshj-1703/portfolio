@@ -96,13 +96,13 @@ const technologies = [
       { name: "Firebase", logo: techLogos.firebase, documentation: "https://firebase.google.com/docs" },
     ],
   },
-  {
-    category: "DevOps & Infrastructure",
-    items: [
-      { name: "Docker", logo: techLogos.docker, documentation: "https://docs.docker.com/get-started/" },
-      { name: "Terraform (Beginner)", logo: techLogos.terraform, documentation: "https://developer.hashicorp.com/terraform/docs" },
-    ],
-  },
+  // {
+  //   category: "DevOps & Infrastructure",
+  //   items: [
+  //     { name: "Docker", logo: techLogos.docker, documentation: "https://docs.docker.com/get-started/" },
+  //     { name: "Terraform (Beginner)", logo: techLogos.terraform, documentation: "https://developer.hashicorp.com/terraform/docs" },
+  //   ],
+  // },
   {
     category: "Version Control",
     items: [

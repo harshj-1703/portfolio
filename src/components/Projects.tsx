@@ -50,14 +50,14 @@ const projects = [
       "A Flutter app available in both Hindi and English, providing users with access to the teachings of the Bhagavad Gita. This app is available on the Play Store.",
     image: "/projects/shreemad_bhagvadgeeta.png",
     link: "https://play.google.com/store/apps/details?id=com.shreemad_bhagvadgita.shreemad_bhagvadgita&hl=en",
-  },
-  {
-    name: "Chanakya GPT",
-    description:
-      "This project provides suggestions and advice based on the teachings from the Chanakya Neeti book, helping users apply ancient wisdom to modern challenges.",
-    image: "/projects/chankya_neeti.png",
-    link: "https://github.com/harshj-1703/Chanakya-GPT",
-  },
+  }
+  // {
+  //   name: "Chanakya GPT",
+  //   description:
+  //     "This project provides suggestions and advice based on the teachings from the Chanakya Neeti book, helping users apply ancient wisdom to modern challenges.",
+  //   image: "/projects/chankya_neeti.png",
+  //   link: "https://github.com/harshj-1703/Chanakya-GPT",
+  // },
 ];
 
 function Projects() {
@@ -68,7 +68,7 @@ function Projects() {
     >
       <div className="container mx-auto px-4">
         <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-center font-josefin">
-          Projects
+          Personal Projects
         </h2>
         <div className="flex flex-wrap justify-center">
           {projects.map((project, index) => (
