@@ -1,97 +1,51 @@
 import Image from "next/image";
 import React from "react";
-
-const projects = [
-  {
-    name: "BhagvadgitaGPT ",
-    description:
-      "BhagvadGitaGPT is a full-stack AI application that answers spiritual and life questions using the Bhagavad Gita as a knowledge base. The backend is a Flask API; the frontend is a React/TypeScript SPA built with Vite.",
-    image: "/projects/shreemad_bhagvadgeeta_api.png",
-    link: "http://bhagvadgitagpt-by-hj.netlify.app/",
-  },
-  {
-    name: "Government Document Management",
-    description:
-      "An B.Tech Final Year Project, Created Website with MERN Stack using ReactJS as frontend and NodeJS as backend API. Also used Firebase services for mobile OTP, Storage and User Management, Email etc.",
-    image: "/projects/gov_doc.png",
-    link: "https://github.com/harshj-1703/Government-Docs-Manager",
-  },
-  {
-    name: "Government Document Management App",
-    description:
-      "An B.Tech Final Year Project, Created Flutter Mobile Application that is used to verify Document generated for users in government document management Website with QR Code scanning.",
-    image: "/projects/gov_doc.png",
-    link: "https://github.com/harshj-1703/Government-Docs-Manager-Flutter-App",
-  },
-  {
-    name: "HJ Donation",
-    description:
-      "This project focuses on HJ donation, helping underprivileged individuals by offering old clothing and items. It uses Entity Framework and an MSSQL database. Users can contribute items, and there's an admin panel. Each item can have 4 photos and additional details.",
-    image: "/projects/hj_donation.png",
-    link: "https://github.com/harshj-1703/HJ_Donation_.net",
-  },
-  {
-    name: "Student Interest Subject Choice ChatBot",
-    description:
-      "An AI project in NLP that helps students select elective subjects for the ICT department with their description and interest.",
-    image: "/projects/student_choice.png",
-    link: "https://github.com/harshj-1703/Student-Elective_Subject-Web-FLASK-AI",
-  },
-  {
-    name: "GET-SET-WORK",
-    description:
-      "An app connecting job seekers and companies using Flutter and Firebase. It includes Google Ads, Firebase storage, OTP verification, and more.",
-    image: "/projects/getsetwork.png",
-    link: "",
-  },
-  {
-    name: "Shreemad Bhagavad Gita App",
-    description:
-      "A Flutter app available in both Hindi and English, providing users with access to the teachings of the Bhagavad Gita. This app is available on the Play Store.",
-    image: "/projects/shreemad_bhagvadgeeta.png",
-    link: "https://play.google.com/store/apps/details?id=com.shreemad_bhagvadgita.shreemad_bhagvadgita&hl=en",
-  }
-  // {
-  //   name: "Chanakya GPT",
-  //   description:
-  //     "This project provides suggestions and advice based on the teachings from the Chanakya Neeti book, helping users apply ancient wisdom to modern challenges.",
-  //   image: "/projects/chankya_neeti.png",
-  //   link: "https://github.com/harshj-1703/Chanakya-GPT",
-  // },
-];
+import { projects } from "../common/constants";
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col items-center justify-center min-h-screen bg-black text-white py-10"
+      className="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white py-10"
     >
       <div className="container mx-auto px-4">
-        <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-center font-josefin">
+        <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-center font-josefin text-blue-900 dark:text-white">
           Personal Projects
         </h2>
         <div className="flex flex-wrap justify-center">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col items-center m-4 bg-gray-900 rounded-lg shadow-lg overflow-hidden max-w-xs w-full" // Adjusted for width and max-width
+              className={`flex flex-col m-4 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-lg overflow-hidden max-w-xs w-full hover:border-blue-400 dark:hover:border-blue-700 transition-colors duration-300 ${project.link ? "cursor-pointer" : ""}`}
             >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <Image
-                  width={100}
-                  height={100}
-                  src={project.image}
-                  alt={project.name}
-                  className="w-full h-40 object-cover"
-                />
-              </a>
-              <div className="p-4">
-                <h3 className="text-xl font-semibold text-center">
+              {project.link ? (
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full block overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <Image
+                    width={320}
+                    height={192}
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-44 object-contain p-2 transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              ) : (
+                <div className="w-full overflow-hidden bg-gray-100 dark:bg-gray-800">
+                  <Image
+                    width={320}
+                    height={192}
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-44 object-contain p-2"
+                  />
+                </div>
+              )}
+              <div className="p-4 flex-1">
+                <h3 className="text-lg font-semibold text-center mb-1">
                   {project.name}
                 </h3>
-                <p className="mt-1 text-center max-w-[300px]">
+                <p className="text-center text-gray-500 dark:text-gray-400 text-xs leading-relaxed">
                   {project.description}
-                </p>{" "}
+                </p>
               </div>
             </div>
           ))}

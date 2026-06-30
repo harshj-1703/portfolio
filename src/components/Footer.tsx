@@ -1,63 +1,88 @@
+"use client";
 import Image from "next/image";
 import React from "react";
-
-const socialMediaLinks = [
-  {
-    name: "Email",
-    url: "mailto:harshj6680@google.com",
-    logo: "/logos/Email.svg",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/harshjolapara/",
-    logo: "/logos/LinkedIn.svg",
-  },
-  {
-    name: "GitHub",
-    url: "https://github.com/harshj-1703",
-    logo: "/logos/GitHub.svg",
-  },
-  {
-    name: "Stack Overflow",
-    url: "https://stackoverflow.com/users/19262833/harsh-jolapara",
-    logo: "/logos/Stack Overflow.svg",
-  },
-  {
-    name: "Medium",
-    url: "https://medium.com/@harshj-1703",
-    logo: "/logos/Medium.svg",
-  },
-];
+import { socialMediaLinks } from "../common/constants";
 
 function Footer() {
   return (
-    <section
+    <footer
       id="footer"
-      className="flex flex-row items-center justify-between bg-black text-white py-4 px-10"
+      className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-gray-800 py-5 px-6"
     >
-      <div className="font-josefin">Developed By: Harsh Jolapara</div>
-      <div>
-        <div className="flex justify-center space-x-4">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Left: credit */}
+        <p className="text-sm text-gray-500 dark:text-gray-400 font-josefin whitespace-nowrap">
+          Developed By:{" "}
+          <span className="text-slate-800 dark:text-white font-semibold">Harsh Jolapara</span>
+        </p>
+
+        {/* Center: Voltage CV button */}
+        <div className="voltage-button">
+          <a href="/resume.pdf" download>
+            <button>
+              <svg className="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
+              </svg>
+              Download CV
+            </button>
+          </a>
+
+          {/* Electric SVG (adapted to blue theme) */}
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px" y="0px"
+            viewBox="0 0 234.6 61.3"
+            preserveAspectRatio="none"
+            xmlSpace="preserve"
+          >
+            <defs>
+              <filter id="glow-cv">
+                <feGaussianBlur className="blur" result="coloredBlur" stdDeviation="2" />
+                <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves={0.3} result="turbulence" />
+                <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G" result="displace" />
+                <feMerge>
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="coloredBlur" />
+                  <feMergeNode in="displace" />
+                  <feMergeNode in="SourceGraphic" />
+                </feMerge>
+              </filter>
+            </defs>
+            <path
+              className="voltage line-1"
+              d="m216.3 51.2c-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 6.8-7.3 6.8-3.7 0-3.7-4.6-7.3-4.6-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-0.9-7.3-0.9-3.7 0-3.7-2.7-7.3-2.7-3.7 0-3.7 7.8-7.3 7.8-3.7 0-3.7-4.9-7.3-4.9-3.7 0-3.7-7.8-7.3-7.8-3.7 0-3.7-1.1-7.3-1.1-3.7 0-3.7 3.1-7.3 3.1-3.7 0-3.7 10.9-7.3 10.9-3.7 0-3.7-12.5-7.3-12.5-3.7 0-3.7 4.6-7.3 4.6-3.7 0-3.7 4.5-7.3 4.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-10-7.3-10-3.7 0-3.7-0.4-7.3-0.4-3.7 0-3.7 2.3-7.3 2.3-3.7 0-3.7 7.1-7.3 7.1-3.7 0-3.7-11.2-7.3-11.2-3.7 0-3.7 3.5-7.3 3.5-3.7 0-3.7 3.6-7.3 3.6-3.7 0-3.7-2.9-7.3-2.9-3.7 0-3.7 8.4-7.3 8.4-3.7 0-3.7-14.6-7.3-14.6-3.7 0-3.7 5.8-7.3 5.8-2.2 0-3.8-0.4-5.5-1.5-1.8-1.1-1.8-2.9-2.9-4.8-1-1.8 1.9-2.7 1.9-4.8 0-3.4-2.1-3.4-2.1-6.8s-9.9-3.4-9.9-6.8 8-3.4 8-6.8c0-2.2 2.1-2.4 3.1-4.2 1.1-1.8 0.2-3.9 2-5 1.8-1 3.1-7.9 5.3-7.9 3.7 0 3.7 0.9 7.3 0.9 3.7 0 3.7 6.7 7.3 6.7 3.7 0 3.7-1.8 7.3-1.8 3.7 0 3.7-0.6 7.3-0.6 3.7 0 3.7-7.8 7.3-7.8h7.3c3.7 0 3.7 4.7 7.3 4.7 3.7 0 3.7-1.1 7.3-1.1 3.7 0 3.7 11.6 7.3 11.6 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-12.9 7.3-12.9 3.7 0 3.7 10.9 7.3 10.9 3.7 0 3.7 1.3 7.3 1.3 3.7 0 3.7-8.7 7.3-8.7 3.7 0 3.7 11.5 7.3 11.5 3.7 0 3.7-1.4 7.3-1.4 3.7 0 3.7-2.6 7.3-2.6 3.7 0 3.7-5.8 7.3-5.8 3.7 0 3.7-1.3 7.3-1.3 3.7 0 3.7 6.6 7.3 6.6s3.7-9.3 7.3-9.3c3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7 8.5 7.3 8.5 3.7 0 3.7 0.2 7.3 0.2 3.7 0 3.7-1.5 7.3-1.5 3.7 0 3.7 1.6 7.3 1.6s3.7-5.1 7.3-5.1c2.2 0 0.6 9.6 2.4 10.7s4.1-2 5.1-0.1c1 1.8 10.3 2.2 10.3 4.3 0 3.4-10.7 3.4-10.7 6.8s1.2 3.4 1.2 6.8 1.9 3.4 1.9 6.8c0 2.2 7.2 7.7 6.2 9.5-1.1 1.8-12.3-6.5-14.1-5.5-1.7 0.9-0.1 6.2-2.2 6.2z"
+              fill="transparent"
+              stroke="#93c5fd"
+            />
+            <path
+              className="voltage line-2"
+              d="m216.3 52.1c-3 0-3-0.5-6-0.5s-3 3-6 3-3-2-6-2-3 1.6-6 1.6-3-0.4-6-0.4-3-1.2-6-1.2-3 3.4-6 3.4-3-2.2-6-2.2-3-3.4-6-3.4-3-0.5-6-0.5-3 1.4-6 1.4-3 4.8-6 4.8-3-5.5-6-5.5-3 2-6 2-3 2-6 2-3 1.6-6 1.6-3-4.4-6-4.4-3-0.2-6-0.2-3 1-6 1-3 3.1-6 3.1-3-4.9-6-4.9-3 1.5-6 1.5-3 1.6-6 1.6-3-1.3-6-1.3-3 3.7-6 3.7-3-6.4-6-6.4-3 2.5-6 2.5h-6c-3 0-3-0.6-6-0.6s-3-1.4-6-1.4-3 0.9-6 0.9-3 4.3-6 4.3-3-3.5-6-3.5c-2.2 0-3.4-1.3-5.2-2.3-1.8-1.1-3.6-1.5-4.6-3.3s-4.4-3.5-4.4-5.7c0-3.4 0.4-3.4 0.4-6.8s2.9-3.4 2.9-6.8-0.8-3.4-0.8-6.8c0-2.2 0.3-4.2 1.3-5.9 1.1-1.8 0.8-6.2 2.6-7.3 1.8-1 5.5-2 7.7-2 3 0 3 2 6 2s3-0.5 6-0.5 3 5.1 6 5.1 3-1.1 6-1.1 3-5.6 6-5.6 3 4.8 6 4.8 3 0.6 6 0.6 3-3.8 6-3.8 3 5.1 6 5.1 3-0.6 6-0.6 3-1.2 6-1.2 3-2.6 6-2.6 3-0.6 6-0.6 3 2.9 6 2.9 3-4.1 6-4.1 3 0.1 6 0.1 3 3.7 6 3.7 3 0.1 6 0.1 3-0.6 6-0.6 3 0.7 6 0.7 3-2.2 6-2.2 3 4.4 6 4.4 3-1.7 6-1.7 3-4 6-4 3 4.7 6 4.7 3-0.5 6-0.5 3-0.8 6-0.8 3-3.8 6-3.8 3 6.3 6 6.3 3-4.8 6-4.8 3 1.9 6 1.9 3-1.9 6-1.9 3 1.3 6 1.3c2.2 0 5-0.5 6.7 0.5 1.8 1.1 2.4 4 3.5 5.8 1 1.8 0.3 3.7 0.3 5.9 0 3.4 3.4 3.4 3.4 6.8s-3.3 3.4-3.3 6.8 4 3.4 4 6.8c0 2.2-6 2.7-7 4.4-1.1 1.8 1.1 6.7-0.7 7.7-1.6 0.8-4.7-1.1-6.8-1.1z"
+              fill="transparent"
+              stroke="#3b82f6"
+            />
+          </svg>
+
+          <div className="dots">
+            <div className="dot dot-1" />
+            <div className="dot dot-2" />
+            <div className="dot dot-3" />
+            <div className="dot dot-4" />
+            <div className="dot dot-5" />
+          </div>
+        </div>
+
+        {/* Right: social icons in dark pill */}
+        <div className="flex items-center space-x-3 bg-black/60 dark:bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10">
           {socialMediaLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <Image
-                src={link.logo}
-                alt={link.name}
-                width={36}
-                height={36}
-                className="cursor-pointer transition-transform transform hover:scale-110"
-              />
+            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <Image src={link.logo} alt={link.name} width={26} height={26} className="cursor-pointer transition-transform transform hover:scale-110" />
             </a>
           ))}
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

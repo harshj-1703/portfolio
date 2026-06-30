@@ -1,29 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-
-const USERNAME = "harshj-1703";
-
-interface GitHubUser {
-  id: number;
-  login: string;
-  html_url: string;
-  avatar_url: string;
-}
-
-interface Node {
-  id: string;
-  x: number;
-  y: number;
-  r: number;
-  vx: number;
-  vy: number;
-  label: string;
-  color: string;
-  glow: string;
-  img: HTMLImageElement | null;
-  isCenter: boolean;
-  url: string;
-}
+import { useTheme } from "../context/ThemeContext";
+import { GitHubUser, GraphNode } from "../common/interfaces";
+import { GITHUB_USERNAME } from "../common/constants";
 
 function neonColor(i: number, total: number): string {
   const hue = (i / Math.max(total, 1)) * 360;
@@ -56,6 +35,17 @@ export default function GitHubNetwork() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [status, setStatus] = useState("Loading followers...");
   const [hasError, setHasError] = useState(false);
+  const { theme } = useTheme();
+  const themeRef = useRef(theme);
+
+  // Keep ref in sync so draw functions pick up theme without re-running effect
+  useEffect(() => {
+    themeRef.current = theme;
+    if (canvasRef.current) {
+      canvasRef.current.style.background =
+        theme === "dark" ? "#050510" : "#eef3ff";
+    }
+  }, [theme]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -64,9 +54,9 @@ export default function GitHubNetwork() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    let nodes: Node[] = [];
-    let dragging: Node | null = null;
-    let hovered: Node | null = null;
+    let nodes: GraphNode[] = [];
+    let dragging: GraphNode | null = null;
+    let hovered: GraphNode | null = null;
     let animFrame: number;
     let W = 0,
       H = 0;
@@ -84,7 +74,7 @@ export default function GitHubNetwork() {
       ctx!.scale(dpr, dpr);
     }
 
-    async function buildNodes(followers: GitHubUser[], centerUser: GitHubUser) {
+    async function buildNodes(followers: GitHubUser[], centerUser: GitHubUser): Promise<void> {
       resize();
       const cx = W / 2,
         cy = H / 2;
@@ -141,7 +131,7 @@ export default function GitHubNetwork() {
       });
     }
 
-    function drawNode(n: Node, t: number) {
+    function drawNode(n: GraphNode, t: number) {
       const isHov = hovered === n;
       const r = n.r;
       const pulse = 1 + 0.08 * Math.sin(t * 0.002 + n.x * 0.01);
@@ -184,7 +174,7 @@ export default function GitHubNetwork() {
           (r - 2) * 2,
         );
       } else {
-        ctx!.fillStyle = "#111";
+        ctx!.fillStyle = themeRef.current === "dark" ? "#111" : "#dde8f8";
         ctx!.fillRect(n.x - r, n.y - r, r * 2, r * 2);
         ctx!.fillStyle = n.color;
         ctx!.font = `bold ${r * 0.6}px Arial`;
@@ -195,7 +185,7 @@ export default function GitHubNetwork() {
       ctx!.restore();
 
       if (isHov || n.isCenter) {
-        ctx!.fillStyle = "#fff";
+        ctx!.fillStyle = themeRef.current === "dark" ? "#fff" : "#111";
         ctx!.font = n.isCenter ? "bold 13px Arial" : "11px Arial";
         ctx!.textAlign = "center";
         ctx!.textBaseline = "top";
@@ -206,7 +196,7 @@ export default function GitHubNetwork() {
       }
     }
 
-    function drawEdge(center: Node, node: Node, t: number) {
+    function drawEdge(center: GraphNode, node: GraphNode, t: number) {
       const dx = node.x - center.x,
         dy = node.y - center.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
@@ -286,7 +276,7 @@ export default function GitHubNetwork() {
       };
     }
 
-    function findNode(pos: { x: number; y: number }): Node | null {
+    function findNode(pos: { x: number; y: number }): GraphNode | null {
       for (let i = nodes.length - 1; i >= 0; i--) {
         const n = nodes[i];
         const dx = pos.x - n.x,
@@ -369,9 +359,9 @@ export default function GitHubNetwork() {
       try {
         setStatus("Fetching GitHub followers...");
         const [userRes, followersRes] = await Promise.all([
-          fetch(`https://api.github.com/users/${USERNAME}`),
+          fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
           fetch(
-            `https://api.github.com/users/${USERNAME}/followers?per_page=30`,
+            `https://api.github.com/users/${GITHUB_USERNAME}/followers?per_page=30`,
           ),
         ]);
         if (!userRes.ok || !followersRes.ok) throw new Error("API error");
@@ -407,10 +397,10 @@ export default function GitHubNetwork() {
   return !hasError ? (
     <section
       id="github-network"
-      className="flex flex-col items-center justify-center bg-black text-white py-10"
+      className="flex flex-col items-center justify-center bg-white dark:bg-black text-gray-900 dark:text-white py-10"
     >
       <div className="container mx-auto px-4 w-full">
-        <h2 className="underline underline-offset-4 text-4xl font-bold mb-3 text-center font-josefin">
+        <h2 className="underline underline-offset-4 text-4xl font-bold mb-3 text-center font-josefin text-blue-900 dark:text-white">
           GitHub Network
         </h2>
         <p className="text-center text-gray-400 text-sm mb-4">{status}</p>
@@ -424,7 +414,7 @@ export default function GitHubNetwork() {
                 width: "100%",
                 cursor: "grab",
                 borderRadius: "12px",
-                background: "#050510",
+                background: theme === "dark" ? "#050510" : "#eef3ff",
               }}
             />
           </div>

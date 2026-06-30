@@ -54,7 +54,7 @@ export const Navbar = () => {
             href="#resume"
             className="text-gray-800 dark:text-gray-200 hover:text-blue-500"
           >
-            Resume
+            CV
           </a>
         </li>
       </ul>
