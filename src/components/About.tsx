@@ -5,7 +5,7 @@ function About() {
   return (
     <section
       id="about"
-      className="flex items-center justify-center bg-black text-white py-10 min-h-screen"
+      className="flex items-center justify-center bg-gray-50 dark:bg-black text-gray-900 dark:text-white py-10 min-h-screen"
     >
       <div className="container max-w-6xl mx-auto flex flex-col md:flex-row items-center px-4">
         <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8">
@@ -18,7 +18,7 @@ function About() {
           />
         </div>
         <div className="flex-1 text-center md:text-left">
-          <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 text-gray-100 font-josefin">
+          <h2 className="underline underline-offset-4 text-4xl font-bold mb-6 font-josefin text-blue-900 dark:text-white">
             About Me
           </h2>
 
@@ -53,7 +53,7 @@ function About() {
               href="https://www.linkedin.com/in/harshjolapara/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 underline underline-offset-2 transition-colors"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 underline underline-offset-2 transition-colors"
             >
               Visit my LinkedIn for more details.
             </a>

@@ -18,15 +18,12 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6;
-  }
-  50% {
-    box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6;
-  }
+  0%, 100% { box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6; }
+  50%       { box-shadow: 0 0 10px #3b82f6, 0 0 10px #3b82f6, 0 0 10px #3b82f6; }
 }
 
 .glowing-border {
@@ -47,4 +44,119 @@ body {
   src: url('/fonts/PlaywriteGBS-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
+}
+
+/* ─── Voltage / Electric CV Button ─────────────────────────── */
+.voltage-button {
+  position: relative;
+  display: inline-block;
+}
+
+.voltage-button button {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: white;
+  background: #0D1127;
+  padding: 0.6rem 1.8rem;
+  border-radius: 5rem;
+  border: 3px solid #3b82f6;
+  font-size: 0.85rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1em;
+  transition: background 0.3s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.voltage-button button:hover {
+  background: #1e3a8a;
+}
+
+/* Trigger on parent hover so 'a' wrapper doesn't break sibling selectors */
+.voltage-button:hover svg,
+.voltage-button:hover .dots {
+  opacity: 1;
+}
+
+.voltage-button svg {
+  display: block;
+  position: absolute;
+  top: -0.75em;
+  left: -0.25em;
+  width: calc(100% + 0.5em);
+  height: calc(100% + 1.5em);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s 0.1s;
+}
+
+/* Override for the inline button icon — always visible, not positioned */
+.voltage-button .btn-icon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  opacity: 0.85 !important;
+  pointer-events: none;
+  transition: none;
+}
+
+.voltage-button .btn-icon path {
+  filter: none;
+  stroke-dasharray: none;
+  animation: none;
+}
+
+.voltage-button svg path {
+  stroke-dasharray: 100;
+  filter: url("#glow-cv");
+}
+
+.voltage-button svg path.line-1 {
+  stroke: #93c5fd;
+  stroke-dashoffset: 0;
+  animation: spark-1 3s linear infinite;
+}
+
+.voltage-button svg path.line-2 {
+  stroke: #3b82f6;
+  stroke-dashoffset: 500;
+  animation: spark-2 3s linear infinite;
+}
+
+.voltage-button .dots {
+  opacity: 0;
+  transition: opacity 0.3s 0.4s;
+}
+
+.voltage-button .dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #60a5fa;
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0;
+}
+
+.voltage-button .dot-1 { top: 0; left: 20%; animation: fly-up 3s linear infinite; }
+.voltage-button .dot-2 { top: 0; left: 55%; animation: fly-up 3s linear infinite; animation-delay: 0.5s; }
+.voltage-button .dot-3 { top: 0; left: 80%; animation: fly-up 3s linear infinite; animation-delay: 1s; }
+.voltage-button .dot-4 { bottom: 0; left: 30%; animation: fly-down 3s linear infinite; animation-delay: 2.5s; }
+.voltage-button .dot-5 { bottom: 0; left: 65%; animation: fly-down 3s linear infinite; animation-delay: 1.5s; }
+
+@keyframes spark-1 { to { stroke-dashoffset: -1000; } }
+@keyframes spark-2 { to { stroke-dashoffset: -500; } }
+
+@keyframes fly-up {
+  0%        { opacity: 0; transform: translateY(0) scale(0.2); }
+  5%        { opacity: 1; transform: translateY(-1rem) scale(0.4); }
+  10%, 100% { opacity: 0; transform: translateY(-2rem) scale(0.2); }
+}
+
+@keyframes fly-down {
+  0%        { opacity: 0; transform: translateY(0) scale(0.2); }
+  5%        { opacity: 1; transform: translateY(1rem) scale(0.4); }
+  10%, 100% { opacity: 0; transform: translateY(2rem) scale(0.2); }
 }
