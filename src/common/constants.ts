@@ -11,11 +11,31 @@ import type {
 export const GITHUB_USERNAME = "harshj-1703";
 
 export const socialMediaLinks: SocialMediaLink[] = [
-  { name: "Email", url: "mailto:harshj6680@google.com", logo: "/logos/Email.svg" },
-  { name: "LinkedIn", url: "https://www.linkedin.com/in/harshjolapara/", logo: "/logos/LinkedIn.svg" },
-  { name: "GitHub", url: "https://github.com/harshj-1703", logo: "/logos/GitHub.svg" },
-  { name: "Stack Overflow", url: "https://stackoverflow.com/users/19262833/harsh-jolapara", logo: "/logos/Stack Overflow.svg" },
-  { name: "Medium", url: "https://medium.com/@harshj-1703", logo: "/logos/Medium.svg" },
+  {
+    name: "Email",
+    url: "mailto:harshjolapara1703@google.com",
+    logo: "/logos/Email.svg",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/harshjolapara/",
+    logo: "/logos/LinkedIn.svg",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/harshj-1703",
+    logo: "/logos/GitHub.svg",
+  },
+  {
+    name: "Stack Overflow",
+    url: "https://stackoverflow.com/users/19262833/harsh-jolapara",
+    logo: "/logos/Stack Overflow.svg",
+  },
+  {
+    name: "Medium",
+    url: "https://medium.com/@harshj-1703",
+    logo: "/logos/Medium.svg",
+  },
 ];
 
 export const projects: Project[] = [
@@ -71,22 +91,45 @@ export const projects: Project[] = [
 ];
 
 const techLogos = {
-  js: "/logos/JavaScript.svg", ts: "/logos/TypeScript.svg", react: "/logos/React.svg",
-  node: "/logos/Node.js.svg", tailwind: "/logos/Tailwind CSS.svg", flutter: "/logos/Flutter.svg",
-  ec2: "/logos/EC2.svg", lambda: "/logos/Lambda.svg", s3: "/logos/Simple Storage Service.svg",
-  dynamodb: "/logos/DynamoDB.svg", mongodb: "/logos/MongoDB.svg", rds: "/logos/RDS.svg",
-  sqs: "/logos/Simple Queue Service.svg", connect: "/logos/Connect.svg",
-  pinpoint: "/logos/Pinpoint.svg", ses: "/logos/Simple Email Service.svg",
-  location: "/logos/Location Service.svg", php: "/logos/PHP.svg",
-  cloudWatch: "/logos/CloudWatch.svg", bitbucket: "/logos/BitBucket.svg",
-  git: "/logos/Git.svg", github: "/logos/GitHub.svg", gitlab: "/logos/GitLab.svg",
-  sqlServer: "/logos/Microsoft SQL Server.svg", mysql: "/logos/MySQL.svg",
-  postgreSQL: "/logos/PostgresSQL.svg", python: "/logos/Python.svg",
-  sqlite: "/logos/SQLite.svg", html5: "/logos/HTML5.svg", css3: "/logos/CSS3.svg",
-  firebase: "/logos/Firebase.svg", c: "/logos/C.svg", postman: "/logos/Postman.svg",
-  apiGateway: "/logos/API Gateway.svg", bedrock: "/logos/Bedrock.svg",
-  amazonLex: "/logos/Amazon Lex.svg", docker: "/logos/docker.svg",
-  jira: "/logos/jira.svg", swagger: "/logos/swagger.svg",
+  js: "/logos/JavaScript.svg",
+  ts: "/logos/TypeScript.svg",
+  react: "/logos/React.svg",
+  node: "/logos/Node.js.svg",
+  tailwind: "/logos/Tailwind CSS.svg",
+  flutter: "/logos/Flutter.svg",
+  ec2: "/logos/EC2.svg",
+  lambda: "/logos/Lambda.svg",
+  s3: "/logos/Simple Storage Service.svg",
+  dynamodb: "/logos/DynamoDB.svg",
+  mongodb: "/logos/MongoDB.svg",
+  rds: "/logos/RDS.svg",
+  sqs: "/logos/Simple Queue Service.svg",
+  connect: "/logos/Connect.svg",
+  pinpoint: "/logos/Pinpoint.svg",
+  ses: "/logos/Simple Email Service.svg",
+  location: "/logos/Location Service.svg",
+  php: "/logos/PHP.svg",
+  cloudWatch: "/logos/CloudWatch.svg",
+  bitbucket: "/logos/BitBucket.svg",
+  git: "/logos/Git.svg",
+  github: "/logos/GitHub.svg",
+  gitlab: "/logos/GitLab.svg",
+  sqlServer: "/logos/Microsoft SQL Server.svg",
+  mysql: "/logos/MySQL.svg",
+  postgreSQL: "/logos/PostgresSQL.svg",
+  python: "/logos/Python.svg",
+  sqlite: "/logos/SQLite.svg",
+  html5: "/logos/HTML5.svg",
+  css3: "/logos/CSS3.svg",
+  firebase: "/logos/Firebase.svg",
+  c: "/logos/C.svg",
+  postman: "/logos/Postman.svg",
+  apiGateway: "/logos/API Gateway.svg",
+  bedrock: "/logos/Bedrock.svg",
+  amazonLex: "/logos/Amazon Lex.svg",
+  docker: "/logos/docker.svg",
+  jira: "/logos/jira.svg",
+  swagger: "/logos/swagger.svg",
 };
 
 export const technologies: TechCategory[] = [
@@ -94,80 +137,194 @@ export const technologies: TechCategory[] = [
     category: "Languages & Frameworks",
     items: [
       { name: "C", logo: techLogos.c, doc: "https://en.cppreference.com/w/c" },
-      { name: "HTML5", logo: techLogos.html5, doc: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5" },
+      {
+        name: "HTML5",
+        logo: techLogos.html5,
+        doc: "https://developer.mozilla.org/en-US/docs/Glossary/HTML5",
+      },
       { name: "CSS3", logo: techLogos.css3, doc: "https://www.css3.info/" },
-      { name: "JavaScript", logo: techLogos.js, doc: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-      { name: "TypeScript", logo: techLogos.ts, doc: "https://www.typescriptlang.org/docs/" },
-      { name: "React", logo: techLogos.react, doc: "https://reactjs.org/docs/getting-started.html" },
-      { name: "Node.js", logo: techLogos.node, doc: "https://nodejs.org/en/docs/" },
-      { name: "Tailwind", logo: techLogos.tailwind, doc: "https://tailwindcss.com/docs" },
-      { name: "Flutter", logo: techLogos.flutter, doc: "https://flutter.dev/docs" },
+      {
+        name: "JavaScript",
+        logo: techLogos.js,
+        doc: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        name: "TypeScript",
+        logo: techLogos.ts,
+        doc: "https://www.typescriptlang.org/docs/",
+      },
+      {
+        name: "React",
+        logo: techLogos.react,
+        doc: "https://reactjs.org/docs/getting-started.html",
+      },
+      {
+        name: "Node.js",
+        logo: techLogos.node,
+        doc: "https://nodejs.org/en/docs/",
+      },
+      {
+        name: "Tailwind",
+        logo: techLogos.tailwind,
+        doc: "https://tailwindcss.com/docs",
+      },
+      {
+        name: "Flutter",
+        logo: techLogos.flutter,
+        doc: "https://flutter.dev/docs",
+      },
       { name: "PHP", logo: techLogos.php, doc: "https://www.php.net/" },
-      { name: "Python", logo: techLogos.python, doc: "https://www.python.org/doc/" },
+      {
+        name: "Python",
+        logo: techLogos.python,
+        doc: "https://www.python.org/doc/",
+      },
     ],
   },
   {
     category: "Databases",
     items: [
       { name: "MySQL", logo: techLogos.mysql, doc: "https://www.mysql.com/" },
-      { name: "PostgreSQL", logo: techLogos.postgreSQL, doc: "https://www.postgresql.org/docs/" },
-      { name: "MS SQL", logo: techLogos.sqlServer, doc: "https://docs.microsoft.com/en-us/sql/sql-server/" },
-      { name: "SQLite", logo: techLogos.sqlite, doc: "https://www.sqlite.org/docs.html" },
-      { name: "MongoDB", logo: techLogos.mongodb, doc: "https://www.mongodb.com/" },
+      {
+        name: "PostgreSQL",
+        logo: techLogos.postgreSQL,
+        doc: "https://www.postgresql.org/docs/",
+      },
+      {
+        name: "MS SQL",
+        logo: techLogos.sqlServer,
+        doc: "https://docs.microsoft.com/en-us/sql/sql-server/",
+      },
+      {
+        name: "SQLite",
+        logo: techLogos.sqlite,
+        doc: "https://www.sqlite.org/docs.html",
+      },
+      {
+        name: "MongoDB",
+        logo: techLogos.mongodb,
+        doc: "https://www.mongodb.com/",
+      },
     ],
   },
   {
     category: "AWS Services",
     items: [
       { name: "EC2", logo: techLogos.ec2, doc: "https://aws.amazon.com/ec2/" },
-      { name: "Lambda", logo: techLogos.lambda, doc: "https://aws.amazon.com/lambda/" },
+      {
+        name: "Lambda",
+        logo: techLogos.lambda,
+        doc: "https://aws.amazon.com/lambda/",
+      },
       { name: "S3", logo: techLogos.s3, doc: "https://aws.amazon.com/s3/" },
-      { name: "DynamoDB", logo: techLogos.dynamodb, doc: "https://aws.amazon.com/dynamodb/" },
+      {
+        name: "DynamoDB",
+        logo: techLogos.dynamodb,
+        doc: "https://aws.amazon.com/dynamodb/",
+      },
       { name: "RDS", logo: techLogos.rds, doc: "https://aws.amazon.com/rds/" },
       { name: "SQS", logo: techLogos.sqs, doc: "https://aws.amazon.com/sqs/" },
-      { name: "Connect", logo: techLogos.connect, doc: "https://aws.amazon.com/connect/" },
-      { name: "Pinpoint", logo: techLogos.pinpoint, doc: "https://aws.amazon.com/pinpoint/" },
+      {
+        name: "Connect",
+        logo: techLogos.connect,
+        doc: "https://aws.amazon.com/connect/",
+      },
+      {
+        name: "Pinpoint",
+        logo: techLogos.pinpoint,
+        doc: "https://aws.amazon.com/pinpoint/",
+      },
       { name: "SES", logo: techLogos.ses, doc: "https://aws.amazon.com/ses/" },
-      { name: "Location", logo: techLogos.location, doc: "https://aws.amazon.com/location/" },
-      { name: "CloudWatch", logo: techLogos.cloudWatch, doc: "https://aws.amazon.com/cloudwatch/" },
-      { name: "API GW", logo: techLogos.apiGateway, doc: "https://docs.aws.amazon.com/apigateway/" },
-      { name: "Lex", logo: techLogos.amazonLex, doc: "https://docs.aws.amazon.com/lex/" },
-      { name: "Bedrock", logo: techLogos.bedrock, doc: "https://docs.aws.amazon.com/bedrock/" },
+      {
+        name: "Location",
+        logo: techLogos.location,
+        doc: "https://aws.amazon.com/location/",
+      },
+      {
+        name: "CloudWatch",
+        logo: techLogos.cloudWatch,
+        doc: "https://aws.amazon.com/cloudwatch/",
+      },
+      {
+        name: "API GW",
+        logo: techLogos.apiGateway,
+        doc: "https://docs.aws.amazon.com/apigateway/",
+      },
+      {
+        name: "Lex",
+        logo: techLogos.amazonLex,
+        doc: "https://docs.aws.amazon.com/lex/",
+      },
+      {
+        name: "Bedrock",
+        logo: techLogos.bedrock,
+        doc: "https://docs.aws.amazon.com/bedrock/",
+      },
     ],
   },
   {
     category: "BaaS",
     items: [
-      { name: "Firebase", logo: techLogos.firebase, doc: "https://firebase.google.com/docs" },
+      {
+        name: "Firebase",
+        logo: techLogos.firebase,
+        doc: "https://firebase.google.com/docs",
+      },
     ],
   },
   {
     category: "Version Control",
     items: [
       { name: "Git", logo: techLogos.git, doc: "https://git-scm.com/doc" },
-      { name: "GitHub", logo: techLogos.github, doc: "https://github.com/docs" },
-      { name: "GitLab", logo: techLogos.gitlab, doc: "https://docs.gitlab.com/ee/" },
-      { name: "Bitbucket", logo: techLogos.bitbucket, doc: "https://support.atlassian.com/bitbucket-cloud/docs/overview/" },
+      {
+        name: "GitHub",
+        logo: techLogos.github,
+        doc: "https://github.com/docs",
+      },
+      {
+        name: "GitLab",
+        logo: techLogos.gitlab,
+        doc: "https://docs.gitlab.com/ee/",
+      },
+      {
+        name: "Bitbucket",
+        logo: techLogos.bitbucket,
+        doc: "https://support.atlassian.com/bitbucket-cloud/docs/overview/",
+      },
     ],
   },
   {
     category: "Tools",
     items: [
-      { name: "Postman", logo: techLogos.postman, doc: "https://learning.postman.com/docs/getting-started/introduction/" },
-      { name: "Jira", logo: techLogos.jira, doc: "https://support.atlassian.com/jira-software-cloud/docs/jira-software-documentation/" },
-      { name: "Swagger", logo: techLogos.swagger, doc: "https://swagger.io/docs/" },
+      {
+        name: "Postman",
+        logo: techLogos.postman,
+        doc: "https://learning.postman.com/docs/getting-started/introduction/",
+      },
+      {
+        name: "Jira",
+        logo: techLogos.jira,
+        doc: "https://support.atlassian.com/jira-software-cloud/docs/jira-software-documentation/",
+      },
+      {
+        name: "Swagger",
+        logo: techLogos.swagger,
+        doc: "https://swagger.io/docs/",
+      },
     ],
   },
 ];
 
 export const achievements: Achievement[] = [
   {
-    title: "AWS Knowledge: Amazon Connect Communications Specialist - Training Badge",
+    title:
+      "AWS Knowledge: Amazon Connect Communications Specialist - Training Badge",
     issuer: "Amazon Web Services (AWS)",
     year: "May 2026",
     expiry: null,
     downloadLink: null,
-    verifyLink: "https://www.credly.com/badges/d5a636b4-2956-40a3-adf7-5eacd051064a",
+    verifyLink:
+      "https://www.credly.com/badges/d5a636b4-2956-40a3-adf7-5eacd051064a",
   },
   {
     title: "AWS Certified Cloud Practitioner",
@@ -220,7 +377,8 @@ export const achievements: Achievement[] = [
     verifyLink: null,
   },
   {
-    title: "Student Interest Group — Leadership, Goal Setting & Change Management",
+    title:
+      "Student Interest Group — Leadership, Goal Setting & Change Management",
     issuer: "SIG",
     year: null,
     expiry: null,
@@ -241,7 +399,16 @@ export const experiences: ExperienceItem[] = [
       "For backend integration and deployments on AWS, worked with Lambda, EC2, S3, API Gateway, CloudFront, DynamoDB, RDS (PostgreSQL), Parameter Store, Secrets Manager, Lex, and IAM roles, policies, and permissions.",
       "Worked with CCaaS technologies on AWS, including Amazon Connect — designing IVR flows, managing queues, routing profiles, and integrating with Lambda, Lex bots, and chat/call services.",
     ],
-    tags: ["React", "Node.js", "TypeScript", "AWS", "Amazon Connect", "Python", "DynamoDB", "PostgreSQL"],
+    tags: [
+      "React",
+      "Node.js",
+      "TypeScript",
+      "AWS",
+      "Amazon Connect",
+      "Python",
+      "DynamoDB",
+      "PostgreSQL",
+    ],
   },
   {
     company: "3G Tech Solutions",
