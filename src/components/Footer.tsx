@@ -7,33 +7,44 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-gray-800 py-5 px-6"
+      className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-gray-800 py-5 px-6 overflow-x-hidden"
     >
+      <style jsx>{`
+        @media (max-width: 639px) {
+          .voltage-button {
+            width: 100% !important;
+            max-width: 100% !important;
+          }
+          .voltage-button a {
+            width: 100% !important;
+            display: block !important;
+          }
+          .voltage-button button {
+            width: 100% !important;
+            min-width: 0 !important;
+            justify-content: center !important;
+            box-sizing: border-box !important;
+          }
+          .voltage-button svg:not(.btn-icon) {
+            max-width: 100% !important;
+          }
+        }
+      `}</style>
       <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left: credit */}
         <p className="text-sm text-gray-500 dark:text-gray-400 font-josefin whitespace-nowrap">
           Developed By:{" "}
-          <span className="text-slate-800 dark:text-white font-semibold">
-            Harsh Jolapara
-          </span>
+          <span className="text-slate-800 dark:text-white font-semibold">Harsh Jolapara</span>
         </p>
 
         {/* Center: Voltage CV + Resume buttons */}
-        <div className="flex items-center gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
           {/* Download Resume button */}
-          <div className="voltage-button">
-            <a href="/Harsh_Jolapara_Resume.pdf" download>
-              <button>
-                <svg
-                  className="btn-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+          <div className="voltage-button w-full sm:w-auto">
+            <a href="/Harsh_Jolapara_Resume.pdf" download className="block w-full sm:w-auto">
+              <button className="w-full sm:w-auto justify-center text-sm sm:text-base px-4 py-2 gap-2 whitespace-nowrap">
+                <svg className="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
                 </svg>
                 Download Resume
               </button>
@@ -43,33 +54,16 @@ function Footer() {
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
+              x="0px" y="0px"
               viewBox="0 0 234.6 61.3"
               preserveAspectRatio="none"
               xmlSpace="preserve"
             >
               <defs>
                 <filter id="glow-resume">
-                  <feGaussianBlur
-                    className="blur"
-                    result="coloredBlur"
-                    stdDeviation="2"
-                  />
-                  <feTurbulence
-                    type="fractalNoise"
-                    baseFrequency="0.075"
-                    numOctaves={0.3}
-                    result="turbulence"
-                  />
-                  <feDisplacementMap
-                    in="SourceGraphic"
-                    in2="turbulence"
-                    scale="30"
-                    xChannelSelector="R"
-                    yChannelSelector="G"
-                    result="displace"
-                  />
+                  <feGaussianBlur className="blur" result="coloredBlur" stdDeviation="2" />
+                  <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves={0.3} result="turbulence" />
+                  <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G" result="displace" />
                   <feMerge>
                     <feMergeNode in="coloredBlur" />
                     <feMergeNode in="coloredBlur" />
@@ -103,19 +97,11 @@ function Footer() {
           </div>
 
           {/* Download CV button */}
-          <div className="voltage-button">
-            <a href="/Harsh_Jolapara_CV_Detailed.pdf" download>
-              <button>
-                <svg
-                  className="btn-icon"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="18"
-                  height="18"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+          <div className="voltage-button w-full sm:w-auto">
+            <a href="/Harsh_Jolapara_CV_Detailed.pdf" download className="block w-full sm:w-auto">
+              <button className="w-full sm:w-auto justify-center text-sm sm:text-base px-4 py-2 gap-2 whitespace-nowrap">
+                <svg className="btn-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                  <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/>
                 </svg>
                 Download CV
               </button>
@@ -125,33 +111,16 @@ function Footer() {
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              x="0px"
-              y="0px"
+              x="0px" y="0px"
               viewBox="0 0 234.6 61.3"
               preserveAspectRatio="none"
               xmlSpace="preserve"
             >
               <defs>
                 <filter id="glow-cv">
-                  <feGaussianBlur
-                    className="blur"
-                    result="coloredBlur"
-                    stdDeviation="2"
-                  />
-                  <feTurbulence
-                    type="fractalNoise"
-                    baseFrequency="0.075"
-                    numOctaves={0.3}
-                    result="turbulence"
-                  />
-                  <feDisplacementMap
-                    in="SourceGraphic"
-                    in2="turbulence"
-                    scale="30"
-                    xChannelSelector="R"
-                    yChannelSelector="G"
-                    result="displace"
-                  />
+                  <feGaussianBlur className="blur" result="coloredBlur" stdDeviation="2" />
+                  <feTurbulence type="fractalNoise" baseFrequency="0.075" numOctaves={0.3} result="turbulence" />
+                  <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="30" xChannelSelector="R" yChannelSelector="G" result="displace" />
                   <feMerge>
                     <feMergeNode in="coloredBlur" />
                     <feMergeNode in="coloredBlur" />
@@ -188,20 +157,8 @@ function Footer() {
         {/* Right: social icons in dark pill */}
         <div className="flex items-center space-x-3 bg-black/60 dark:bg-black/40 backdrop-blur-sm rounded-full px-4 py-2 border border-white/10">
           {socialMediaLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center"
-            >
-              <Image
-                src={link.logo}
-                alt={link.name}
-                width={26}
-                height={26}
-                className="cursor-pointer transition-transform transform hover:scale-110"
-              />
+            <a key={link.name} href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <Image src={link.logo} alt={link.name} width={26} height={26} className="cursor-pointer transition-transform transform hover:scale-110" />
             </a>
           ))}
         </div>
