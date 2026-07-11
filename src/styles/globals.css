@@ -160,3 +160,9 @@ body {
   5%        { opacity: 1; transform: translateY(1rem) scale(0.4); }
   10%, 100% { opacity: 0; transform: translateY(2rem) scale(0.2); }
 }
+
+@media (max-width: 640px) {
+  .voltage-button {
+    width: 100%;
+  }
+}
