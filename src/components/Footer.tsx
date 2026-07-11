@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-gray-800 py-5 px-6 overflow-x-hidden"
+      className="bg-gray-100 dark:bg-black border-t border-gray-200 dark:border-gray-800 py-5 px-6"
     >
       <style jsx>{`
         @media (max-width: 639px) {
